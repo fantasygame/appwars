@@ -1,0 +1,19 @@
+sudo: false
+language: ruby
+rvm:
+  - 2.3.0
+before_script:
+  - cp config/database.travis.yml config/database.yml
+  - psql -c 'create database appwars_test;' -U postgres
+  - bundle exec rake db:migrate --trace
+addons:
+  code_climate:
+    repo_token: ea760e66c8ad94eca379a7e1e99b3f13f451720cf474100e006a3ffb08b8831f
+deploy:
+  provider: heroku
+  api_key:
+    secure: NAa43T12yLwZneO30Lf+R4cH3IIYJVSjpYyMM1dO1Iibtk5CYmlXs56E+DhNhDwr9V7xwsMTwRtU//SmiaFGt4My4Ttb58o7T2rL3reoqazbsCBPto+qAqPW8SUm8n58DFPQ3uzpUPPwZkDMx8JyurKNoCokAvlaigyRZnV/puM=
+  app: appwars
+  on:
+    repo: fantasygame/appwars
+  run: "rake db:migrate"

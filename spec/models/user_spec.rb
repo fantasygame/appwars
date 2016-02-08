@@ -1,13 +1,9 @@
 describe User do
+  subject { create(:user, name: 'Name') }
 
-  before(:each) { @user = FactoryGirl.create(:user) }
-
-  subject { @user }
-
-  it { should respond_to(:name) }
+  it { is_expected.to respond_to(:name) }
 
   it "#name returns a string" do
-    expect(@user.name).to match 'Test User'
+    expect(subject.name).to match 'Name'
   end
-
 end

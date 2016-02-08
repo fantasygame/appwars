@@ -4,16 +4,20 @@ module Omniauth
       OmniAuth.config.mock_auth[:github] = {
         'provider' => 'github',
         'uid' => '123545',
-        'info' => {
-          'nickname' => 'mock_nickname',
-          'name' => 'mock_name',
-          'email' => 'mock@example.com',
-          'image' => 'https://avatars.githubusercontent.com/u/mock_number?v=3'
-        },
+        'info' => info_hash,
         'credentials' => {
           'token' => 'mock_token',
           'expires' => false
         }
+      }
+    end
+
+    def info_hash
+      {
+        'nickname' => 'mock_nickname',
+        'name' => 'mock_name',
+        'email' => 'mock@example.com',
+        'image' => 'https://avatars.githubusercontent.com/u/mock_number?v=3'
       }
     end
   end

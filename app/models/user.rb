@@ -1,13 +1,9 @@
 class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
-  after_initialize :set_default_role, :if => :new_record?
+  after_initialize :set_default_role, if: :new_record?
 
   def set_default_role
-    if User.count == 0
-      self.role ||= :admin
-    else
-      self.role ||= :user
-    end
+    self.role ||= User.count.zero? ? :admin : :user
   end
 
   def self.create_with_omniauth(auth)
@@ -15,9 +11,8 @@ class User < ActiveRecord::Base
       user.provider = auth['provider']
       user.uid = auth['uid']
       if auth['info']
-         user.name = auth['info']['name'] || ""
+        user.name = auth['info']['name'] || ""
       end
     end
   end
-
 end

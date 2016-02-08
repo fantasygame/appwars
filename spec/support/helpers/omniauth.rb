@@ -1,16 +1,18 @@
 module Omniauth
-
   module Mock
     def auth_mock
-      OmniAuth.config.mock_auth[:twitter] = {
-        'provider' => 'twitter',
+      OmniAuth.config.mock_auth[:github] = {
+        'provider' => 'github',
         'uid' => '123545',
-        'user_info' => {
-          'name' => 'mockuser'
+        'info' => {
+          'nickname' => 'mock_nickname',
+          'name' => 'mock_name',
+          'email' => 'mock@example.com',
+          'image' => 'https://avatars.githubusercontent.com/u/mock_number?v=3'
         },
         'credentials' => {
           'token' => 'mock_token',
-          'secret' => 'mock_secret'
+          'expires' => false
         }
       }
     end
@@ -24,5 +26,4 @@ module Omniauth
       click_link "Sign in"
     end
   end
-
 end

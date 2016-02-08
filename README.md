@@ -64,7 +64,8 @@ We use RSpec 3 for backend testing.
 * Every commit is reviewed by the other team member. Make sure to fix any issue that is found.
 * We use rubocop to mantain high code quality. Make sure to follow its advices. Install rubocop plugin to your editor.
 * Make your best to write tests for your code. You can check code coverage in codeclimate.
-* We don't like merge commits. Use rebase. `bash git config --global branch.autosetuprebase always `
+* We don't like merge commits. Use rebase. `bash git config --global branch.autosetuprebase always`
+* Be aware that every push is deploying to heroku
 
 ## Contributing
 

@@ -51,6 +51,7 @@ group :production do
   gem 'rails_12factor'
 end
 group :test do
+  gem 'shoulda-matchers', '~> 3.1'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'launchy'

@@ -1,8 +1,8 @@
 # AppWars
 
-[![](http://img.shields.io/travis/fantasygame/appswar.svg?style=flat-square)](https://travis-ci.org/fantasygame/appswar)
-[![](http://img.shields.io/codeclimate/github/fantasygame/appswar.svg?style=flat-square)](https://codeclimate.com/github/fantasygame/appswar)
-[![](http://img.shields.io/codeclimate/coverage/github/fantasygame/appswar.svg?style=flat-square)](https://codeclimate.com/github/fantasygame/appswar)
+[![](http://img.shields.io/travis/fantasygame/appwars.svg?style=flat-square)](https://travis-ci.org/fantasygame/appwars)
+[![](http://img.shields.io/codeclimate/github/fantasygame/appwars.svg?style=flat-square)](https://codeclimate.com/github/fantasygame/appwars)
+[![](http://img.shields.io/codeclimate/coverage/github/fantasygame/appwars.svg?style=flat-square)](https://codeclimate.com/github/fantasygame/appwars)
 
 ## [Check out our app](http://appwars.herokuapp.com/)
 
@@ -24,7 +24,7 @@ The purpose of this app is to organize code wars between developers.
 
 ## Setup
 ### Clone repository
-`git clone git@github.com:fantasygame/appswar.git`
+`git clone git@github.com:fantasygame/appwars.git`
 
 ### Download gems
 `bundle install`
@@ -35,7 +35,7 @@ Ubuntu: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-
 
 OSX: http://postgresapp.com/
 
-### Create postgresql superuser appswar.
+### Create postgresql superuser appwars.
 
 To do that you can use interactive psql command
 `createuser --interactive`

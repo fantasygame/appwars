@@ -1,7 +1,9 @@
 # AppWars
 
 [![](http://img.shields.io/travis/fantasygame/appwars.svg?style=flat-square)](https://travis-ci.org/fantasygame/appwars)
+
 [![](http://img.shields.io/codeclimate/github/fantasygame/appwars.svg?style=flat-square)](https://codeclimate.com/github/fantasygame/appwars)
+
 [![](http://img.shields.io/codeclimate/coverage/github/fantasygame/appwars.svg?style=flat-square)](https://codeclimate.com/github/fantasygame/appwars)
 
 ## [Check out our app](http://appwars.herokuapp.com/)

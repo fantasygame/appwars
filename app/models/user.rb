@@ -1,5 +1,9 @@
 class User < ActiveRecord::Base
   enum role: [:user, :vip, :admin]
+
+  has_many :competitions
+  has_many :wars, through: :competitions
+
   after_initialize :set_default_role, if: :new_record?
 
   def set_default_role

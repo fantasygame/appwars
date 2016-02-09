@@ -11,10 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160209002112) do
+ActiveRecord::Schema.define(version: 20160209003321) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "competitions", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "war_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_competitions_on_user_id", using: :btree
+    t.index ["war_id"], name: "index_competitions_on_war_id", using: :btree
+  end
 
   create_table "ideas", force: :cascade do |t|
     t.integer  "user_id"
@@ -53,6 +62,8 @@ ActiveRecord::Schema.define(version: 20160209002112) do
     t.datetime "updated_at",  null: false
   end
 
+  add_foreign_key "competitions", "users"
+  add_foreign_key "competitions", "wars"
   add_foreign_key "ideas", "users"
   add_foreign_key "reviews", "users"
   add_foreign_key "reviews", "wars"

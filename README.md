@@ -1,4 +1,4 @@
-# AppsWar
+# AppWars
 
 [![](http://img.shields.io/travis/fantasygame/appswar.svg?style=flat-square)](https://travis-ci.org/fantasygame/appswar)
 [![](http://img.shields.io/codeclimate/github/fantasygame/appswar.svg?style=flat-square)](https://codeclimate.com/github/fantasygame/appswar)
